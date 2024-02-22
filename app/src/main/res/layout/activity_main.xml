@@ -14,9 +14,35 @@
         android:layout_marginTop="50dp"
         android:layout_marginEnd="105dp"
         android:background="#FF0000"
+        android:id="@+id/bodyLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
     </FrameLayout>
+
+    <Button
+        android:id="@+id/buttonChangeColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="300dp"
+        android:backgroundTint="#00BCD4"
+        android:text="Cambiar Color de Fondo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/buttonSwitchActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="300dp"
+        android:backgroundTint="#00BCD4"
+        android:text="Cambiar a Activity 2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
