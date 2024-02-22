@@ -6,7 +6,9 @@ import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.EditText
 import android.widget.FrameLayout
+import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
     @SuppressLint("MissingInflatedId")
@@ -17,6 +19,7 @@ class MainActivity : AppCompatActivity() {
         val buttonChangeColor = findViewById<Button>(R.id.buttonChangeColor)
         val buttonSwitchActivity = findViewById<Button>(R.id.buttonSwitchActivity)
         val bodyLayout = findViewById<FrameLayout>(R.id.bodyLayout)
+        val editTextMessage = findViewById<EditText>(R.id.editTextMessage)
 
         // Acción para cambiar el color de fondo del cuerpo
         buttonChangeColor.setOnClickListener {
@@ -26,8 +29,19 @@ class MainActivity : AppCompatActivity() {
 
         // Acción para cambiar a Activity 2
         buttonSwitchActivity.setOnClickListener {
+            // Obtener el mensaje del Intent
+            val message = editTextMessage.text.toString()
+
+            // Crear Intent con el mensaje
             val intent = Intent(this, MainActivity2::class.java)
+            intent.putExtra("EXTRA_MESSAGE", message)
+
+            // Iniciar Activity2
             startActivity(intent)
+
+
         }
+
+
     }
 }

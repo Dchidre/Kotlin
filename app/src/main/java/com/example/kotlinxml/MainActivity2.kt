@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.FrameLayout
+import android.widget.TextView
 
 class MainActivity2 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -13,6 +14,10 @@ class MainActivity2 : AppCompatActivity() {
         setContentView(R.layout.activity_main2)
 
         val buttonSwitchActivity = findViewById<Button>(R.id.buttonSwitchActivity)
+        val message = intent.getStringExtra("EXTRA_MESSAGE")
+
+        val textView = findViewById<TextView>(R.id.textView)
+        textView.text = "BIENVENIDO A LA APP\n$message"
 
         // Acción para cambiar a Activity 1
         buttonSwitchActivity.setOnClickListener {
